@@ -1,5 +1,11 @@
 //Загальні стилі
 
+@font-face {
+  font-family: "Corbel";
+  src: url("@{font}/Corbel-reg.woff") format("woff2"),
+  url("@{font}/Corbel-reg.woff") format("woff");
+}
+
 * {
   box-sizing: border-box;
   vertical-align: top;
@@ -10,6 +16,7 @@
   outline: none;
   border: none;
   transition: all .2s;
+  font-family: 'PT Sans', sans-serif;
 }
 
 body {
@@ -23,7 +30,6 @@ body {
   color: @three-color;
   font-weight: 400;
   text-transform: uppercase;
-
 
   //@media @breakpoint-md {
   //  font-size: 35px;
