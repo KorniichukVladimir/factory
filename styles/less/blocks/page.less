@@ -39,7 +39,6 @@
 
   &-bottom {
     background: transparent;
-    margin: 0 0 -52px 0;
 
     & .nav {
 
@@ -63,13 +62,13 @@
         }
 
         &:after {
-          right: -56px;
+          right: -55px;
           border-width: 52px 56px 0 0;
           border-color: #ebebeb transparent transparent transparent;
         }
 
         &:before {
-          left: -56px;
+          left: -55px;
           border-width: 0 56px 52px 0;
           border-color: transparent #ebebeb transparent transparent;
         }
@@ -79,6 +78,7 @@
         flex-grow: 1;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
 
         &.show {
 
@@ -113,6 +113,12 @@
         border-radius: inherit;
         width: max-content;
         background: #fff;
+
+        @media screen and @breakpoint-md {
+          width: 100%;
+          margin: 0 0 20px 0;
+          text-align: center;
+        }
       }
 
       &-item {
@@ -142,11 +148,12 @@
     & .section {
 
       &-slider {
-        background: @one-color url("@{img}/slider-bg.jpg") no-repeat center bottom;
+        background: url("@{img}/slider-bg.jpg") no-repeat center bottom;
         background-size: cover;
         min-height: 480px;
         display: flex;
         align-items: center;
+        margin: -52px 0 0 0;
 
         .content {
           text-align: center;
@@ -160,6 +167,7 @@
           font: 32px/32px 'PT Sans';
           color: #fff;
           margin: 0 0 20px 0;
+          font-weight: 400;
 
           & span {
             display: block;
@@ -424,114 +432,6 @@
         }
       }
 
-      &-about {
-        padding: 44px 0;
-        margin: 0 0 50px 0;
-
-        & .block {
-          display: flex;
-          align-items: center;
-          position: relative;
-
-          @media screen and @breakpoint-md {
-            flex-direction: column;
-          }
-
-          & .img {
-            position: absolute;
-            z-index: -1;
-
-            @media screen and @breakpoint-md {
-              position: static;
-            }
-          }
-
-          &-text {
-            padding: 22px 22px 22px 400px;
-            margin: 0 0 0 40px;
-            box-shadow: 0 0 27px rgba(1, 1, 2, .1);
-
-            @media screen and @breakpoint-md {
-              padding: 22px;
-              margin: 0;
-            }
-
-            & .text {
-              font: 16px/18px 'PT Sans';
-              font-weight: 600;
-              color: @one-color;
-            }
-          }
-        }
-      }
-
-      &-partners {
-        padding: 56px 0 0 0;
-        background: url("@{img}/partner-bg.jpg") no-repeat;
-        background-size: cover;
-
-        & .partners-slick {
-          width: 100%;
-
-          & .slick-track {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-          }
-
-          & .slick-slide {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            & > div {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height: 100%;
-              padding: 0 10px;
-            }
-          }
-
-          & .img {
-            margin: 0 0 30px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-          }
-
-          & img {
-            width: 100%;
-          }
-        }
-
-        & .slick-prev, .slick-next {
-          top: -80px;
-          background: @three-color;
-          height: 40px;
-          width: 40px;
-
-          &:before {
-            display: block;
-            content: url("@{img}/chevron-partner.svg");
-          }
-        }
-
-        & .slick-prev {
-          left: 0;
-
-          &:before {
-            transform: rotate(180deg);
-          }
-        }
-
-        & .slick-next {
-          right: 0;
-        }
-      }
-
       &-info {
         padding: 56px 0 22px 0;
 
@@ -541,8 +441,13 @@
           font: 16px/16px 'PT Sans';
           display: block;
           text-align: center;
-          padding: 12px 20px;
+          padding: 12px 35px;
           font-weight: 400;
+
+          @media screen and @breakpoint-xs {
+            width: max-content;
+            margin: 0 auto;
+          }
         }
 
         & .news {
@@ -552,24 +457,24 @@
           justify-content: center;
           position: relative;
           min-height: 200px;
+          height: 100%;
 
-          //&:before {
-          //  display: block;
-          //  position: absolute;
-          //  content: '';
-          //  left: 0;
-          //  top: 0;
-          //  border-style: solid;
-          //  border-width: 50ex 26px 50ex 2px;
-          //  border-color: #fff transparent #fff #fff;
-          //  line-height: 0;
-          //}
+          @media screen and @breakpoint-xs {
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto 30px;
+          }
 
           & img {
             width: 225px;
             height: 100%;
             object-fit: cover;
             clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0 50%);
+
+            @media screen and @breakpoint-xs {
+              clip-path: none;
+              width: 100%;
+            }
           }
 
           & .text {
@@ -612,6 +517,190 @@
         }
       }
     }
+
+  }
+
+  &-about {
+
+    & .section {
+
+      &-about {
+        padding: 15px 0 44px 0;
+      }
+
+      &-principles {
+        background: url("@{img}/prey-bg.png") no-repeat center;
+
+        & .title {
+
+          &_2 {
+            text-transform: inherit;
+            color: @three-color;
+            font: 22px/32px 'PT Sans';
+            font-weight: 600;
+            margin: 0 0 20px 0;
+          }
+
+          &_3 {
+            text-align: center;
+            color: @two-color;
+            font: 60px/60px 'PT Sans';
+            font-weight: 700;
+            margin: 0 0 10px 0;
+          }
+
+          &_4 {
+            text-align: center;
+            color: @one-color;
+            font: 16px/22px 'PT Sans';
+            font-weight: 600;
+            margin: 0;
+          }
+        }
+
+        & .text {
+          text-align: center;
+          color: @one-color;
+          font: 16px/22px 'PT Sans';
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+
+    }
+  }
+
+}
+
+.section {
+
+  &-about {
+    padding: 44px 0;
+    margin: 0 0 50px 0;
+
+    & .block {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      @media screen and @breakpoint-md {
+        flex-direction: column;
+      }
+
+      & .img {
+        position: absolute;
+        z-index: -1;
+
+        @media screen and @breakpoint-md {
+          position: static;
+        }
+
+        & img {
+          width: 100%;
+        }
+      }
+
+      &-text {
+        padding: 22px 22px 22px 400px;
+        min-height: 300px;
+        margin: 0 0 0 40px;
+        box-shadow: 0 0 27px rgba(1, 1, 2, .1);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        @media screen and @breakpoint-md {
+          padding: 22px;
+          margin: 0;
+        }
+
+        & .text {
+          font: 16px/18px 'PT Sans';
+          font-weight: 600;
+          color: @one-color;
+        }
+      }
+    }
+  }
+
+  &-partners {
+    padding: 56px 0 0 0;
+    background: url("@{img}/partner-bg.jpg") no-repeat;
+    background-size: cover;
+
+    & .partners-slick {
+      width: 100%;
+
+      & .slick-track {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      & .slick-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          padding: 0 10px;
+        }
+      }
+
+      & .img {
+        margin: 0 0 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    & .slick-prev, .slick-next {
+      top: -74px;
+      background: @three-color;
+      height: 40px;
+      width: 40px;
+
+      &:before {
+        display: block;
+        content: url("@{img}/chevron-partner.svg");
+      }
+    }
+
+    & .slick-prev {
+      left: 0;
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    & .slick-next {
+      right: 0;
+    }
+  }
+
+  &-breadcrumbs {
+    padding: 25px 0 0 0;
+
+    & a {
+      color: @one-color;
+      font: 16px/24px 'PT Sans';
+
+      &.active {
+        color: @two-color;
+      }
+    }
   }
 
 }
@@ -649,7 +738,12 @@
   }
 
   & .cor {
-    font: 18px/18px 'Corbel';
+    font: 18px/28px 'Corbel';
+    text-align: center;
+  }
+
+  & .wps {
+    font: 16px/28px 'Corbel';
   }
 
 }
