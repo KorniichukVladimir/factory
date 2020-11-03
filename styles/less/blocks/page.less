@@ -215,83 +215,6 @@
         }
       }
 
-      &-product {
-        padding: 54px 0;
-
-        & .product {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          margin: 0 -10px;
-
-          &-one {
-            margin: 0 5px 20px 5px;
-            text-decoration: none;
-            width: 19%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            @media screen and @breakpoint-lg {
-              width: 30%;
-            }
-
-            @media screen and @breakpoint-md {
-              width: 40%;
-            }
-
-            @media screen and @breakpoint-xs {
-              width: 80%;
-            }
-
-            & .title {
-              font: 18px/18px 'PT Sans';
-              color: @one-color;
-              font-weight: 600;
-              margin: 0 0 20px 0;
-            }
-
-            & .img {
-              position: relative;
-              width: 100%;
-              height: 229px;
-              border: 1px solid @fore-color;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              padding: 15px;
-
-              & img {
-                object-fit: contain;
-              }
-
-              &:before {
-                display: block;
-                position: absolute;
-                transform: translateX(-50%);
-                top: -1px;
-                left: 50%;
-                content: "";
-                width: 98px;
-                height: 6px;
-                background: @two-color;
-              }
-            }
-
-            &:hover {
-
-              & .title {
-                color: @three-color;
-              }
-
-              & .img {
-                border: 1px solid @three-color;
-              }
-            }
-          }
-        }
-      }
-
       &-service {
 
         & .service {
@@ -379,143 +302,6 @@
           text-align: center;
         }
       }
-
-      &-form {
-        background: @one-color url("@{img}/form-bg.jpg") no-repeat center top;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        padding: 57px 0;
-
-        & .label, .input {
-          width: 100%;
-          background: #fff;
-          padding: 8px;
-
-          &::placeholder {
-            color: @one-color;
-            font: 16px/22px 'PT Sans';
-            font-weight: 400;
-          }
-        }
-
-        & .input {
-          border: 1px solid @fore-color;
-
-          &:focus {
-            border: 1px solid @three-color;
-          }
-        }
-
-        & .textarea {
-          height: 125px;
-        }
-
-        & .text {
-          color: #fff;
-          font: 14px/18px 'PT Sans';
-          font-weight: 400;
-          margin: 0;
-        }
-
-        & .form_btn {
-          background: @two-color;
-          color: #fff;
-          font: 16px/16px 'PT Sans';
-          width: 100%;
-          padding: 24px 34px;
-          font-weight: 400;
-
-          @media screen and @breakpoint-sm {
-            width: max-content;
-          }
-        }
-      }
-
-      &-info {
-        padding: 56px 0 22px 0;
-
-        & .btn_all {
-          background: @two-color;
-          color: #fff;
-          font: 16px/16px 'PT Sans';
-          display: block;
-          text-align: center;
-          padding: 12px 35px;
-          font-weight: 400;
-
-          @media screen and @breakpoint-xs {
-            width: max-content;
-            margin: 0 auto;
-          }
-        }
-
-        & .news {
-          text-decoration: none;
-          margin: 0 0 30px 0;
-          display: flex;
-          justify-content: center;
-          position: relative;
-          min-height: 200px;
-          height: 100%;
-
-          @media screen and @breakpoint-xs {
-            flex-direction: column;
-            max-width: 300px;
-            margin: 0 auto 30px;
-          }
-
-          & img {
-            width: 225px;
-            height: 100%;
-            object-fit: cover;
-            clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0 50%);
-
-            @media screen and @breakpoint-xs {
-              clip-path: none;
-              width: 100%;
-            }
-          }
-
-          & .text {
-            border: 1px solid #f8f8f8;
-            background: #f8f8f8;
-            padding: 20px;
-
-            &-content {
-              color: #0f0f0f;
-              font: 16px/18px 'PT Sans';
-              font-weight: 400;
-            }
-          }
-
-          & .date {
-            color: @five-color;
-            font: 16px/16px 'PT Sans';
-            font-weight: 400;
-            margin: 0 0 10px 0;
-          }
-
-          & .title {
-            color: #0f0f0f;
-            font: 18px/22px 'PT Sans';
-            font-weight: 400;
-          }
-
-          & .link {
-            color: @three-color;
-            font: 18px/22px 'PT Sans';
-            font-weight: 400;
-          }
-
-          &:hover {
-
-            & .text {
-              background: transparent;
-            }
-          }
-        }
-      }
     }
 
   }
@@ -568,11 +354,115 @@
       }
 
     }
+
+  }
+
+  &-products {
+
+    & .section {
+
+      &-product {
+        padding: 15px 0 44px 0;
+      }
+    }
+
+  }
+
+  &-info {
+
+    & .section {
+
+      &-info {
+        padding: 15px 0 44px 0;
+
+        & .page {
+
+          &-item {
+            margin: 0 2px 0 0;
+            border-radius: 0;
+          }
+
+          &-link {
+            background-color: #ebebeb;
+            border: none;
+            color: @one-color;
+            font: 16px/22px 'PT Sans';
+            font-weight: 600;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & svg {
+              fill: @one-color;
+            }
+
+            &.active {
+              background-color: #102a83;
+              color: #fff;
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-distributors {
+
+    & .section {
+
+      &-advanced {
+        margin: 0 0 20px 0;
+
+        & .title {
+
+          &_2 {
+            text-transform: inherit;
+            color: @three-color;
+            font: 22px/32px 'PT Sans';
+            font-weight: 600;
+            margin: 0 0 20px 0;
+          }
+        }
+
+        & .item {
+          display: flex;
+          align-items: center;
+          padding: 4px 9px;
+          box-shadow: 0 0 27px rgba(1, 1, 2, .1);
+          margin: 0 0 16px 0;
+        }
+
+        & .text {
+          color: #0f0f0f;
+          font: 16px/18px 'PT Sans';
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+    }
   }
 
 }
 
 .section {
+
+  &-breadcrumbs {
+    padding: 25px 0 0 0;
+
+    & a {
+      color: @one-color;
+      font: 16px/24px 'PT Sans';
+
+      &.active {
+        color: @two-color;
+        text-decoration: none;
+        cursor: default;
+      }
+    }
+  }
 
   &-about {
     padding: 44px 0;
@@ -605,6 +495,7 @@
         min-height: 300px;
         margin: 0 0 0 40px;
         box-shadow: 0 0 27px rgba(1, 1, 2, .1);
+        border: 1px solid #fff;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -690,15 +581,216 @@
     }
   }
 
-  &-breadcrumbs {
-    padding: 25px 0 0 0;
+  &-product {
+    padding: 54px 0;
 
-    & a {
-      color: @one-color;
-      font: 16px/24px 'PT Sans';
+    & .product {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -10px;
 
-      &.active {
-        color: @two-color;
+      &-one {
+        margin: 0 5px 20px 5px;
+        text-decoration: none;
+        width: 19%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and @breakpoint-lg {
+          width: 30%;
+        }
+
+        @media screen and @breakpoint-md {
+          width: 40%;
+        }
+
+        @media screen and @breakpoint-xs {
+          width: 80%;
+        }
+
+        & .title {
+          font: 18px/18px 'PT Sans';
+          color: @one-color;
+          font-weight: 600;
+          margin: 0 0 20px 0;
+        }
+
+        & .img {
+          position: relative;
+          width: 100%;
+          height: 229px;
+          border: 1px solid @fore-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 15px;
+
+          & img {
+            object-fit: contain;
+          }
+
+          &:before {
+            display: block;
+            position: absolute;
+            transform: translateX(-50%);
+            top: -1px;
+            left: 50%;
+            content: "";
+            width: 98px;
+            height: 6px;
+            background: @two-color;
+          }
+        }
+
+        &:hover {
+
+          & .title {
+            color: @three-color;
+          }
+
+          & .img {
+            border: 1px solid @three-color;
+          }
+        }
+      }
+    }
+  }
+
+  &-info {
+    padding: 56px 0 22px 0;
+
+    & .btn_all {
+      background: @two-color;
+      color: #fff;
+      font: 16px/16px 'PT Sans';
+      display: block;
+      text-align: center;
+      padding: 12px 35px;
+      font-weight: 400;
+
+      @media screen and @breakpoint-xs {
+        width: max-content;
+        margin: 0 auto;
+      }
+    }
+
+    & .news {
+      text-decoration: none;
+      margin: 0 0 30px 0;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      min-height: 200px;
+      height: 100%;
+
+      @media screen and @breakpoint-xs {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto 30px;
+      }
+
+      & img {
+        width: 225px;
+        height: 100%;
+        object-fit: cover;
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0 50%);
+
+        @media screen and @breakpoint-xs {
+          clip-path: none;
+          width: 100%;
+        }
+      }
+
+      & .text {
+        border: 1px solid #f8f8f8;
+        background: #f8f8f8;
+        padding: 20px;
+
+        &-content {
+          color: #0f0f0f;
+          font: 16px/18px 'PT Sans';
+          font-weight: 400;
+        }
+      }
+
+      & .date {
+        color: @five-color;
+        font: 16px/16px 'PT Sans';
+        font-weight: 400;
+        margin: 0 0 10px 0;
+      }
+
+      & .title {
+        color: #0f0f0f;
+        font: 18px/22px 'PT Sans';
+        font-weight: 400;
+      }
+
+      & .link {
+        color: @three-color;
+        font: 18px/22px 'PT Sans';
+        font-weight: 400;
+      }
+
+      &:hover {
+
+        & .text {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  &-form {
+    background: @one-color url("@{img}/form-bg.jpg") no-repeat center top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 57px 0;
+
+    & .label, .input {
+      width: 100%;
+      background: #fff;
+      padding: 8px;
+
+      &::placeholder {
+        color: @one-color;
+        font: 16px/22px 'PT Sans';
+        font-weight: 400;
+      }
+    }
+
+    & .input {
+      border: 1px solid @fore-color;
+
+      &:focus {
+        border: 1px solid @three-color;
+      }
+    }
+
+    & .textarea {
+      height: 125px;
+    }
+
+    & .text {
+      color: #fff;
+      font: 14px/18px 'PT Sans';
+      font-weight: 400;
+      margin: 0;
+    }
+
+    & .form_btn {
+      background: @two-color;
+      color: #fff;
+      font: 16px/16px 'PT Sans';
+      width: 100%;
+      padding: 24px 34px;
+      font-weight: 400;
+
+      @media screen and @breakpoint-sm {
+        width: max-content;
       }
     }
   }
