@@ -314,45 +314,6 @@
         padding: 15px 0 44px 0;
       }
 
-      &-principles {
-        background: url("@{img}/prey-bg.png") no-repeat center;
-
-        & .title {
-
-          &_2 {
-            text-transform: inherit;
-            color: @three-color;
-            font: 22px/32px 'PT Sans';
-            font-weight: 600;
-            margin: 0 0 20px 0;
-          }
-
-          &_3 {
-            text-align: center;
-            color: @two-color;
-            font: 60px/60px 'PT Sans';
-            font-weight: 700;
-            margin: 0 0 10px 0;
-          }
-
-          &_4 {
-            text-align: center;
-            color: @one-color;
-            font: 16px/22px 'PT Sans';
-            font-weight: 600;
-            margin: 0;
-          }
-        }
-
-        & .text {
-          text-align: center;
-          color: @one-color;
-          font: 16px/22px 'PT Sans';
-          font-weight: 400;
-          margin: 0;
-        }
-      }
-
     }
 
   }
@@ -445,6 +406,46 @@
     }
   }
 
+  &-coolant {
+
+    & .section {
+
+      &-about {
+
+        & .block {
+
+          & .title {
+
+            &_5 {
+              color: @one-color;
+              font: 22px/32px 'PT Sans';
+              font-weight: 700;
+              margin: 0 0 20px 0;
+            }
+          }
+
+          &-text {
+            padding: 22px 22px 22px 440px;
+
+            & .text {
+              font: 16px/28px 'PT Sans';
+              font-weight: 400;
+              color: #0f0f0f;
+              margin: 0 0 2px 0;
+
+              & span {
+                color: @two-color;
+                font: 18px/28px 'PT Sans';
+                font-weight: 700;
+                word-spacing: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 .section {
@@ -511,6 +512,45 @@
           color: @one-color;
         }
       }
+    }
+  }
+
+  &-principles {
+    background: url("@{img}/prey-bg.png") no-repeat center;
+
+    & .title {
+
+      &_2 {
+        text-transform: inherit;
+        color: @three-color;
+        font: 22px/32px 'PT Sans';
+        font-weight: 600;
+        margin: 0 0 20px 0;
+      }
+
+      &_3 {
+        text-align: center;
+        color: @two-color;
+        font: 60px/60px 'PT Sans';
+        font-weight: 700;
+        margin: 0 0 10px 0;
+      }
+
+      &_4 {
+        text-align: center;
+        color: @one-color;
+        font: 16px/22px 'PT Sans';
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    & .text {
+      text-align: center;
+      color: @one-color;
+      font: 16px/22px 'PT Sans';
+      font-weight: 400;
+      margin: 0;
     }
   }
 
@@ -749,6 +789,15 @@
     display: flex;
     align-items: center;
     padding: 57px 0;
+
+    & .title {
+
+      &_4 {
+        color: #fff;
+        font: 22px/32px 'PT Sans';
+        font-weight: 600;
+      }
+    }
 
     & .label, .input {
       width: 100%;

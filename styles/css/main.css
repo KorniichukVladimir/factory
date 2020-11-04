@@ -279,37 +279,6 @@ body {
 .page-about .section-about {
   padding: 15px 0 44px 0;
 }
-.page-about .section-principles {
-  background: url("../../images/prey-bg.png") no-repeat center;
-}
-.page-about .section-principles .title_2 {
-  text-transform: inherit;
-  color: #102673;
-  font: 22px/32px 'PT Sans';
-  font-weight: 600;
-  margin: 0 0 20px 0;
-}
-.page-about .section-principles .title_3 {
-  text-align: center;
-  color: #102a83;
-  font: 60px/60px 'PT Sans';
-  font-weight: 700;
-  margin: 0 0 10px 0;
-}
-.page-about .section-principles .title_4 {
-  text-align: center;
-  color: #0f121f;
-  font: 16px/22px 'PT Sans';
-  font-weight: 600;
-  margin: 0;
-}
-.page-about .section-principles .text {
-  text-align: center;
-  color: #0f121f;
-  font: 16px/22px 'PT Sans';
-  font-weight: 400;
-  margin: 0;
-}
 .page-products .section-product {
   padding: 15px 0 44px 0;
 }
@@ -362,6 +331,27 @@ body {
   font: 16px/18px 'PT Sans';
   font-weight: 400;
   margin: 0;
+}
+.page-coolant .section-about .block .title_5 {
+  color: #0f121f;
+  font: 22px/32px 'PT Sans';
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+.page-coolant .section-about .block-text {
+  padding: 22px 22px 22px 440px;
+}
+.page-coolant .section-about .block-text .text {
+  font: 16px/28px 'PT Sans';
+  font-weight: 400;
+  color: #0f0f0f;
+  margin: 0 0 2px 0;
+}
+.page-coolant .section-about .block-text .text span {
+  color: #102a83;
+  font: 18px/28px 'PT Sans';
+  font-weight: 700;
+  word-spacing: 6px;
 }
 .section-breadcrumbs {
   padding: 25px 0 0 0;
@@ -421,6 +411,37 @@ body {
   font: 16px/18px 'PT Sans';
   font-weight: 600;
   color: #0f121f;
+}
+.section-principles {
+  background: url("../../images/prey-bg.png") no-repeat center;
+}
+.section-principles .title_2 {
+  text-transform: inherit;
+  color: #102673;
+  font: 22px/32px 'PT Sans';
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+.section-principles .title_3 {
+  text-align: center;
+  color: #102a83;
+  font: 60px/60px 'PT Sans';
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.section-principles .title_4 {
+  text-align: center;
+  color: #0f121f;
+  font: 16px/22px 'PT Sans';
+  font-weight: 600;
+  margin: 0;
+}
+.section-principles .text {
+  text-align: center;
+  color: #0f121f;
+  font: 16px/22px 'PT Sans';
+  font-weight: 400;
+  margin: 0;
 }
 .section-partners {
   padding: 56px 0 0 0;
@@ -634,6 +655,11 @@ body {
   display: flex;
   align-items: center;
   padding: 57px 0;
+}
+.section-form .title_4 {
+  color: #fff;
+  font: 22px/32px 'PT Sans';
+  font-weight: 600;
 }
 .section-form .label,
 .section-form .input {
