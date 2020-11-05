@@ -253,6 +253,11 @@ body {
   max-width: 900px;
 }
 @media screen and (max-width: 876px) {
+  .header-bottom .dropdown-menu.p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 876px) {
   .header-bottom .dropdown-menu {
     width: 100%;
     margin: 0 0 20px 0;
