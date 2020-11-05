@@ -426,6 +426,11 @@ body {
   box-shadow: 0 0 27px rgba(1, 1, 2, 0.1);
   border: 1px solid #fff;
 }
+@media screen and (max-width: 991px) {
+  .page-contacts .section-contact .block-text {
+    box-shadow: none;
+  }
+}
 .page-contacts .section-contact .block-text a {
   text-decoration: none;
 }
