@@ -30,3 +30,36 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
+
+.pagination {
+  & .page {
+
+    &-item {
+      margin: 0 2px 0 0;
+      border-radius: 0;
+    }
+
+    &-link {
+      background-color: #ebebeb;
+      border: none;
+      color: @one-color;
+      font: 16px/22px 'PT Sans';
+      font-weight: 600;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & svg {
+        fill: @one-color;
+      }
+
+      &.active {
+        background-color: #102a83;
+        color: #fff;
+        cursor: default;
+      }
+    }
+  }
+}
