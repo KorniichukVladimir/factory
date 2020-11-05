@@ -63,3 +63,90 @@ body {
     }
   }
 }
+
+@media (min-width: 576px) {
+  .modal-sm {
+    max-width: 370px;
+    margin: 8.9rem auto;
+  }
+}
+
+.modal-sm {
+  max-width: 370px;
+  margin: 5.5rem auto;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  pointer-events: auto;
+  background-color: @one-color;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 0;
+  outline: 0;
+  padding: 15px;
+
+  & .wrap_form {
+    border: 1px solid #fff;
+    padding: 30px;
+  }
+
+  & .title {
+    font: 28px/32px 'PT Sans';
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+  }
+
+  & .mod {
+
+    &_label {
+      width: 100%;
+      padding: 8px;
+      background: #fff;
+      margin: 0 0 20px 0;
+    }
+
+    &_inp {
+      border: 1px solid @two-color;
+      padding: 8px 20px;
+      width: 100%;
+
+      &::placeholder {
+        font: 16px/22px 'PT Sans';
+        color: @one-color;
+        font-weight: 400;
+      }
+    }
+
+    &_text {
+      text-align: center;
+      color: #fff;
+      font: 12px/14px 'PT Sans';
+      font-weight: 400;
+      margin: 0 0 20px 0;
+    }
+
+    &_sub {
+      font: 16px/22px 'PT Sans';
+      color: #fff;
+      font-weight: 400;
+      width: 100%;
+      padding: 19px;
+      background: @two-color;
+      margin: 0 0 10px 0;
+    }
+
+    &_close {
+      font: 16px/22px 'PT Sans';
+      color: #fff;
+      font-weight: 400;
+      padding: 10px 10px 0;
+      width: max-content;
+      background: transparent;
+    }
+  }
+}
