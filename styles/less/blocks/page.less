@@ -111,10 +111,11 @@
         top: 43px;
         border: none;
         border-radius: inherit;
-        width: max-content;
         background: #fff;
+        width: 68vw;
+        max-width: 900px;
 
-        @media screen and @breakpoint-md {
+        @media screen and (max-width: 876px) {
           width: 100%;
           margin: 0 0 20px 0;
           text-align: center;
@@ -125,6 +126,7 @@
         font: 16px/22px 'PT Sans';
         color: #1e1e1e;
         font-weight: 400;
+        white-space: normal;
 
         &.title {
           color: @two-color;
@@ -138,7 +140,7 @@
         }
 
         &:hover {
-          color: #656565;
+          color: #374996;
           background: transparent;
         }
       }
@@ -349,7 +351,6 @@
           }
 
           &-text {
-            padding: 22px 22px 22px 440px;
 
             & .text {
               font: 16px/28px 'PT Sans';
@@ -913,8 +914,10 @@
         flex-direction: column;
 
         @media screen and @breakpoint-md {
+          box-shadow: none;
           padding: 22px;
           margin: 0;
+          min-height: 200px;
         }
 
         & .text {
@@ -964,7 +967,7 @@
           & img {
             width: 100%;
             height: 100%;
-            object-fit: none;
+            object-fit: cover;
           }
 
           &:before {
@@ -1264,6 +1267,7 @@
 
         & .text {
           background: transparent;
+          border: 1px solid #dddddd;
         }
       }
     }
@@ -1314,6 +1318,12 @@
       font: 14px/18px 'PT Sans';
       font-weight: 400;
       margin: 0;
+
+      & a {
+        color: #fff;
+        font: 14px/18px 'PT Sans';
+        font-weight: 400;
+      }
     }
 
     & .form_btn {
