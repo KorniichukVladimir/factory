@@ -1,5 +1,13 @@
 window.onload = function () {
 
+  let itemDrop = document.querySelector('.nav-item.dropdown');
+  let menuDrop = document.querySelector('.dropdown-menu');
+
+  itemDrop.onmouseover = function show() {
+
+  }
+
+
 //---------------- slick index header
 
   $('.header-slick').slick({
@@ -103,4 +111,3 @@ window.onload = function () {
   });
 
 };
-

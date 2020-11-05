@@ -43,7 +43,7 @@
     & .nav {
 
       &bar {
-        padding: 9px 10px;
+        padding: 9px 10px 0;
         background: #ebebeb !important;
         width: 100%;
         justify-content: space-between;
@@ -79,6 +79,23 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        padding-bottom: 9px;
+
+        &:hover {
+
+          .dropdown-menu {
+            display: block;
+          }
+
+          & .nav-link {
+            background: transparent;
+            color: @one-color;
+
+            & svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
 
         &.show {
 
@@ -112,8 +129,12 @@
         border: none;
         border-radius: inherit;
         background: #fff;
-        width: 68vw;
-        max-width: 900px;
+        width: max-content;
+
+        &.p {
+          width: 68vw;
+          max-width: 900px;
+        }
 
         @media screen and (max-width: 876px) {
           width: 100%;

@@ -175,7 +175,7 @@ body {
   background: transparent;
 }
 .header-bottom .navbar {
-  padding: 9px 10px;
+  padding: 9px 10px 0;
   background: #ebebeb !important;
   width: 100%;
   justify-content: space-between;
@@ -210,6 +210,17 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding-bottom: 9px;
+}
+.header-bottom .nav-item:hover .dropdown-menu {
+  display: block;
+}
+.header-bottom .nav-item:hover .nav-link {
+  background: transparent;
+  color: #0f121f;
+}
+.header-bottom .nav-item:hover .nav-link svg {
+  transform: rotate(180deg);
 }
 .header-bottom .nav-item.show .nav-link {
   background: transparent;
@@ -233,6 +244,11 @@ body {
   border: none;
   border-radius: inherit;
   background: #fff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.header-bottom .dropdown-menu.p {
   width: 68vw;
   max-width: 900px;
 }
