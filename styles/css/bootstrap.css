@@ -1801,7 +1801,7 @@ pre code {
 }
 
 .table-responsive {
-  display: block;
+  display: inline-table;
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;

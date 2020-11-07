@@ -3,7 +3,6 @@
   &-top {
     padding: 8px 0 5px 0;
     background: @one-color;
-    position: relative;
 
     & .navbar-brand {
 
@@ -39,6 +38,11 @@
 
   &-bottom {
     background: transparent;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    z-index: 1;
+
 
     & .nav {
 
@@ -186,7 +190,7 @@
         min-height: 480px;
         display: flex;
         align-items: center;
-        margin: -52px 0 0 0;
+        margin: -53px 0 0 0;
 
         .content {
           text-align: center;
@@ -653,11 +657,18 @@
               display: flex !important;
               align-items: center;
               justify-content: center;
-              border-right: 1px solid @fore-color;
+              border-left: 1px solid @fore-color;
 
               & img {
                 max-height: 100px;
                 cursor: pointer;
+              }
+            }
+
+            & .slick-current {
+
+              & .carousel-small-img {
+                border-left: none;
               }
             }
 
@@ -722,7 +733,6 @@
         & .content {
           border-top: 1px solid @fore-color;
           margin: 0 0 0 -1px;
-          padding: 0;
           height: fit-content;
 
           & .header, .requirement, .characteristic {

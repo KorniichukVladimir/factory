@@ -142,7 +142,6 @@ body {
 .header-top {
   padding: 8px 0 5px 0;
   background: #0f121f;
-  position: relative;
 }
 .header-top .navbar-brand img {
   width: 100%;
@@ -173,6 +172,10 @@ body {
 }
 .header-bottom {
   background: transparent;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 1;
 }
 .header-bottom .navbar {
   padding: 9px 10px 0;
@@ -289,7 +292,7 @@ body {
   min-height: 480px;
   display: flex;
   align-items: center;
-  margin: -52px 0 0 0;
+  margin: -53px 0 0 0;
 }
 .page-index .section-slider .content {
   text-align: center;
@@ -629,11 +632,14 @@ body {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
 }
 .page-product .section-product .carousel-small-img img {
   max-height: 100px;
   cursor: pointer;
+}
+.page-product .section-product .carousel-small .slick-current .carousel-small-img {
+  border-left: none;
 }
 .page-product .section-product .carousel-small .slick-prev,
 .page-product .section-product .carousel-small .slick-next {
@@ -684,7 +690,6 @@ body {
 .page-product .section-product .content {
   border-top: 1px solid #dddddd;
   margin: 0 0 0 -1px;
-  padding: 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
