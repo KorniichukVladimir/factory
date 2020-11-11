@@ -1,8 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Corbel";
-  src: url("../fonts/Corbel-reg.woff") format("woff2"), url("../fonts/Corbel-reg.woff") format("woff");
-}
 * {
   box-sizing: border-box;
   vertical-align: top;
@@ -777,12 +773,12 @@ body {
 }
 .page-text .section-content .list-one p {
   color: #0f121f;
-  font: 18px/26px 'Corbel';
+  font: 18px/26px 'PT Sans';
   font-weight: 500;
   margin: 0;
 }
 .page-text .section-content .list-one span {
-  font: 18px/26px 'Corbel';
+  font: 18px/26px 'PT Sans';
   color: #102673;
   font-weight: 700;
 }
@@ -801,7 +797,7 @@ body {
 }
 .page-text .section-content .list-two p {
   color: #0f121f;
-  font: 18px/26px 'Corbel';
+  font: 18px/26px 'PT Sans';
   font-weight: 500;
   margin: 0;
 }
@@ -1273,11 +1269,11 @@ body {
   color: #374996;
 }
 .footer .cor {
-  font: 18px/28px 'Corbel';
+  font: 16px/28px 'PT Sans';
   text-align: center;
 }
 .footer .wps {
-  font: 16px/28px 'Corbel';
+  font: 16px/28px 'PT Sans';
 }
 /* Slider */
 .slick-slider {
