@@ -543,6 +543,7 @@ body {
 .page-sub-products .section-sub-products .product-one .character {
   border-left: 1px solid #dddddd;
   border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
   padding: 15px;
   text-align: center;
   font: 14px/16px 'PT Sans';
@@ -551,7 +552,9 @@ body {
   margin: 0;
 }
 .page-sub-products .section-sub-products .product-one .partner {
-  border: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -568,6 +571,12 @@ body {
 .page-sub-products .section-sub-products .product-one:hover .img,
 .page-sub-products .section-sub-products .product-one:hover .partner {
   border-color: #102673;
+}
+.page-sub-products .section-sub-products .product-one.without-partners .character {
+  border-bottom: 4px solid #102673;
+}
+.page-sub-products .section-sub-products .product-one.without-partners .partner {
+  display: none;
 }
 .page-product .section-product {
   padding: 24px 0 60px 0;
@@ -629,6 +638,8 @@ body {
   align-items: center;
   justify-content: center;
   border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  margin: 0 1px;
 }
 .page-product .section-product .carousel-small-img img {
   max-height: 100px;
@@ -763,54 +774,65 @@ body {
   font-weight: 700;
   color: #102673;
 }
-.page-text .section-content .text {
+.page-text .section-content p {
   font: 16px/18px 'PT Sans';
-  font-weight: 600;
   color: #0f121f;
 }
-.page-text .section-content .list-one {
-  padding: 10px 0 0 0;
+.page-text .section-content ol {
+  padding: 10px 0 0 16px;
 }
-.page-text .section-content .list-one p {
+.page-text .section-content ol li {
   color: #0f121f;
   font: 18px/26px 'PT Sans';
   font-weight: 500;
   margin: 0;
+  list-style-type: decimal;
 }
-.page-text .section-content .list-one span {
+.page-text .section-content ol li::marker {
   font: 18px/26px 'PT Sans';
   color: #102673;
   font-weight: 700;
 }
-.page-text .section-content .list-two {
+.page-text .section-content ul {
   padding: 10px 0 10px 0;
 }
-.page-text .section-content .list-two li {
+.page-text .section-content ul li {
   margin: 0 0 10px 0;
 }
-.page-text .section-content .list-two span {
+.page-text .section-content ul li::before {
+  content: '';
   width: 10px;
   height: 10px;
   float: left;
   margin: 7px 7px 0 0;
   background: #102673;
 }
-.page-text .section-content .list-two p {
+.page-text .section-content ul li p {
   color: #0f121f;
   font: 18px/26px 'PT Sans';
   font-weight: 500;
   margin: 0;
 }
-.page-text .section-content .table {
-  margin: 0 0 30px 0;
+.page-text .section-content table {
+  display: inline-table;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-collapse: collapse;
 }
-.page-text .section-content .table td,
-.page-text .section-content .table th {
+.page-text .section-content table td,
+.page-text .section-content table th {
   width: 33%;
+  vertical-align: top;
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
 }
-.page-text .section-content .table th {
+.page-text .section-content table th {
   color: #102a83;
   font: 18px/26px 'PT Sans';
+  font-weight: 700;
 }
 .section-breadcrumbs {
   padding: 25px 0 0 0;
@@ -868,7 +890,7 @@ body {
     min-height: 200px;
   }
 }
-.section-about .block-text .text {
+.section-about .block-text p {
   font: 16px/18px 'PT Sans';
   font-weight: 600;
   color: #0f121f;

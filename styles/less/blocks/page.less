@@ -553,6 +553,7 @@
             & .character {
               border-left: 1px solid @fore-color;
               border-right: 1px solid @fore-color;
+              border-bottom: 1px solid @fore-color;
               padding: 15px;
               text-align: center;
               font: 14px/16px 'PT Sans';
@@ -562,7 +563,9 @@
             }
 
             & .partner {
-              border: 1px solid @fore-color;
+              border-left: 1px solid @fore-color;
+              border-right: 1px solid @fore-color;
+              border-bottom: 1px solid @fore-color;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -581,6 +584,17 @@
 
               & .img, .character, .img, .partner {
                 border-color: @three-color;
+              }
+            }
+
+            &.without-partners {
+
+              & .character {
+                border-bottom: 4px solid @three-color;
+              }
+
+              & .partner {
+                display: none;
               }
             }
           }
@@ -658,6 +672,8 @@
               align-items: center;
               justify-content: center;
               border-left: 1px solid @fore-color;
+              border-right: 1px solid @fore-color;
+              margin: 0 1px;
 
               & img {
                 max-height: 100px;
@@ -835,62 +851,73 @@
           color: @three-color;
         }
 
-        & .text {
+        & p {
           font: 16px/18px 'PT Sans';
-          font-weight: 600;
           color: @one-color;
         }
 
-        & .list-one {
-          padding: 10px 0 0 0;
+        & ol {
+          padding: 10px 0 0 16px;
 
-          & p {
+          & li {
             color: @one-color;
             font: 18px/26px 'PT Sans';
             font-weight: 500;
             margin: 0;
-          }
+            list-style-type: decimal;
 
-          & span {
-            font: 18px/26px 'PT Sans';
-            color: @three-color;
-            font-weight: 700;
+            &::marker {
+              font: 18px/26px 'PT Sans';
+              color: @three-color;
+              font-weight: 700;
+            }
           }
         }
 
-        & .list-two {
+        & ul {
           padding: 10px 0 10px 0;
 
           & li {
             margin: 0 0 10px 0;
-          }
 
-          & span {
-            width: 10px;
-            height: 10px;
-            float: left;
-            margin: 7px 7px 0 0;
-            background: @three-color;
-          }
+            &::before {
+              content: '';
+              width: 10px;
+              height: 10px;
+              float: left;
+              margin: 7px 7px 0 0;
+              background: @three-color;
+            }
 
-          & p {
-            color: @one-color;
-            font: 18px/26px 'PT Sans';
-            font-weight: 500;
-            margin: 0;
+            & p {
+              color: @one-color;
+              font: 18px/26px 'PT Sans';
+              font-weight: 500;
+              margin: 0;
+            }
           }
         }
 
-        & .table {
-          margin: 0 0 30px 0;
+        & table {
+          display: inline-table;
+          width: 100%;
+          margin-bottom: 1rem;
+          color: #212529;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          border-collapse: collapse;
 
           & td, th {
             width: 33%;
+            vertical-align: top;
+            border: 1px solid #dee2e6;
+            padding: .75rem;
           }
 
           & th {
             color: @two-color;
             font: 18px/26px 'PT Sans';
+            font-weight: 700;
           }
         }
       }
@@ -959,7 +986,7 @@
           min-height: 200px;
         }
 
-        & .text {
+        & p {
           font: 16px/18px 'PT Sans';
           font-weight: 600;
           color: @one-color;
