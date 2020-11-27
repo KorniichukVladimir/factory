@@ -572,12 +572,6 @@ body {
 .page-sub-products .section-sub-products .product-one:hover .partner {
   border-color: #102673;
 }
-.page-sub-products .section-sub-products .product-one.without-partners .character {
-  border-bottom: 4px solid #102673;
-}
-.page-sub-products .section-sub-products .product-one.without-partners .partner {
-  display: none;
-}
 .page-product .section-product {
   padding: 24px 0 60px 0;
 }
